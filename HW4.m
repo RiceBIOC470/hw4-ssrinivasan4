@@ -1,5 +1,22 @@
 %HW4 Sanjana Srinivasan
 %% 
+
+%GB comments:
+1a 100
+1b 100
+1c 100
+1d 25 Incorrect plot and with no explanation of the result as the question asks. The plot provided in the code produces a graph with the mean along the x-axis and and standard deviation on the y-axis. To address the question, there should have been two plots. One with mean intensity as a function of the circle size and the second with standard deviation values as a function of circle size. 
+2a 100 It appears your final output avi is saturated. On paper, your directions are fine, but I am curious to know whether you altered the LUT to increase the brightness in channel 2?
+2b. 70  Currently the script normalizes intensities for each channel along the time domain. It does not calculate the max intensity across the Z direction for a single time point and channel. To do so, you need to iterate through Z positions (6 positions) for each channel and time point. 
+3a. 50 In a max intensity projection you want to grab the max intensity in the xy plane across all Z sections from a single time point. It appears you are iterating the loop (k) 19 times, which is the time domain and not the Zdomain (6 ). Additionally It does not appear that you are retaining the highest intensity pixels once iterating. 
+3b 100
+3c 100
+3d 100
+3e 100
+4a. 100
+4b. 100
+ Overall = 88
+
 % Problem 1. 
 
 % 1. Write a function to generate an 8-bit image of size 1024x1024 with a random value 
